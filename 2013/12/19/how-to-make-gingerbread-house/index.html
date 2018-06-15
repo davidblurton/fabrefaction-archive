@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]><html class="no-js IE9 IE" lang="en-US"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en-US"><!--<![endif]-->
+	<head>
+<base href="" />
+
+				<meta charset="UTF-8" />
+	<title>Gingerbread architecture: The final frontier &#8211; fabrefaction</title>
+			<script src="/cdn-cgi/apps/head/xrXb5GlWiovCgJt_6LmMAL3rQbk.js"></script><link rel="dns-prefetch" href="//fonts.googleapis.com" />
+			<script type="text/javascript">
+			/* <![CDATA[ */
+			document.documentElement.className = document.documentElement.className.replace(new RegExp('(^|\\s)no-js(\\s|$)'), '$1js$2');
+			/* ]]> */
+		</script>
+	<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s.gravatar.com' />
+
+
+
+
+<!-- `jetpack_related-posts` is included in the concatenated jetpack.css -->
+<link rel='stylesheet' id='jpibfi-style-css'  href='/contents/lib/jquery-pin-it-button-for-images/css/client.css' type='text/css' media='all' />
+<!-- `jetpack_likes` is included in the concatenated jetpack.css -->
+<link rel='stylesheet' id='make-google-font-css'  href='//fonts.googleapis.com/css?family=Muli%3Aregular%2Citalic%7COpen+Sans%3Aregular%2Citalic%2C700%7CCopse%3Aregular&#038;ver=1.7.10#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='/contents/ui/theme/css/libs/font-awesome/css/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='make-main-css'  href='/contents/ui/theme/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='make-print-css'  href='/contents/ui/theme/css/print.css' type='text/css' media='print' />
+<!-- `sharedaddy` is included in the concatenated jetpack.css -->
+<link rel='stylesheet' id='social-logos-css'  href='/contents/lib/jetpack/_inc/social-logos/social-logos.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='/contents/lib/jetpack/css/jetpack.css' type='text/css' media='all' />
+<script type='text/javascript' src='/inc/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='/inc/js/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/contents/lib/jetpack/modules/related-posts/related-posts.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jpibfi_options = {"hover":{"siteTitle":"fabrefaction","image_selector":".jpibfi_container img","disabled_classes":"nopin;wp-smiley","enabled_classes":"","min_image_height":"50","min_image_height_small":0,"min_image_width":"50","min_image_width_small":0,"show_on":"[front],[home],[single],[page],[archive],[search],[category]","disable_on":"","show_on_home":"1","show_on_single":"1","show_on_page":"1","show_on_category":"1","show_on_blog":"1","show_button":"hover","button_margin_bottom":"20","button_margin_top":"20","button_margin_left":"20","button_margin_right":"20","button_position":"4","description_option":["img_title","img_alt","post_title"],"pinLinkedImages":true,"transparency_value":"0","pin_image":"custom","pin_image_button":"square","pin_image_icon":"circle","pin_image_size":"normal","custom_image_url":"\/contents\/uploads\/2014\/06\/fabrefaction-logo-01-01-01.png","use_post_url":"0","retina_friendly":"1","pinImageWidth":"104","pinImageHeight":"104"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/contents/lib/jquery-pin-it-button-for-images/js/jpibfi.client.js'></script>
+
+
+
+
+
+
+
+
+
+		<style type="text/css">
+			a.pinit-button.custom {
+				width: 104px !important;height: 104px !important;			}
+			a.pinit-button.custom span {
+				width: 104px !important;height: 104px !important;background-image: url("/contents/data/2014/06/fabrefaction-logo-01-01-01.png");background-size: 104px 104px;			}
+
+			img.pinit-hover {
+				opacity: 1 !important;
+				filter:alpha(opacity=100) !important;
+			}
+		</style>
+
+
+<link rel='dns-prefetch' href='//v0.wordpress.com'>
+<link rel='dns-prefetch' href='//widgets.wp.com'>
+<link rel='dns-prefetch' href='//s0.wp.com'>
+<link rel='dns-prefetch' href='//0.gravatar.com'>
+<link rel='dns-prefetch' href='//1.gravatar.com'>
+<link rel='dns-prefetch' href='//2.gravatar.com'>
+<link rel='dns-prefetch' href='//i0.wp.com'>
+<link rel='dns-prefetch' href='//i1.wp.com'>
+<link rel='dns-prefetch' href='//i2.wp.com'>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Gingerbread architecture: The final frontier" />
+<meta property="og:url" content="/2013/12/19/how-to-make-gingerbread-house/" />
+<meta property="og:description" content="At last, time to decorate. This is by far the best bit, and your opportunity to hide any blemishes. For me, that was a whacking great crack down the front, the odd broken window pane and some darke…" />
+<meta property="article:published_time" content="2013-12-19T17:00:35+00:00" />
+<meta property="article:modified_time" content="2018-06-14T22:15:43+00:00" />
+<meta property="og:site_name" content="fabrefaction" />
+<meta property="og:image" content="/contents/data/2013/12/GingerbreadHouse21.jpg?fit=1200%2C811" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="811" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@katiemclurg" />
+<meta name="twitter:image" content="/contents/data/2013/12/GingerbreadHouse21.jpg?fit=1200%2C811&#038;w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Begin Make Inline CSS -->
+<style type="text/css">
+body,.font-body{font-family:"Muli","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;font-size:1.6rem;}#comments{font-size:14px;font-size:1.4rem;}.comment-date{font-size:13px;font-size:1.3rem;}.color-primary-text,a,.entry-author-byline a.vcard,.entry-footer a:hover,.comment-form .required,ul.ttfmake-list-dot li:before,ol.ttfmake-list-dot li:before,.entry-comment-count a:hover,.comment-count-icon a:hover{color:#aed4c8;}.color-primary-background,.ttfmake-button.color-primary-background{background-color:#aed4c8;}.color-primary-border{border-color:#aed4c8;}.site-header,.site-title,.site-title a,.site-navigation .menu li a{color:#e47a78;}.site-header .site-title,.site-header .site-title a{color:#171717;}.header-bar,.header-bar .search-form input,.header-social-links li:first-of-type,.header-social-links li a{border-color:#aed4c8;}.header-bar{background-color:rgba(174, 212, 200, 1);}.site-footer,.site-footer .social-links a{color:#5a3e6f;}.site-footer{background-color:rgba(243, 221, 156, 1);}div.custom-logo{background-image:url("/contents/data/2014/06/Logo1.png?fit=200%2C150");width:200px;}div.custom-logo a{padding-bottom:75%;}h1:not(.site-title),h1:not(.site-title) a,.font-header{font-family:"Copse",Georgia,Times,"Times New Roman",serif;font-size:40px;font-size:4rem;}h2,h2 a{font-family:"Copse",Georgia,Times,"Times New Roman",serif;font-size:30px;font-size:3rem;}h3,h3 a,.builder-text-content .widget-title{font-family:"Copse",Georgia,Times,"Times New Roman",serif;font-size:21px;font-size:2.1rem;}h4,h4 a{font-family:"Copse",Georgia,Times,"Times New Roman",serif;font-size:21px;font-size:2.1rem;}h5,h5 a{font-family:"Copse",Georgia,Times,"Times New Roman",serif;font-size:14px;font-size:1.4rem;}h6,h6 a{font-family:"Copse",Georgia,Times,"Times New Roman",serif;font-size:12px;font-size:1.2rem;}.sidebar .widget,.font-widget{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-size:1.3rem;font-weight:normal;font-style:normal;text-transform:none;line-height:1.6;letter-spacing:0px;word-spacing:0px;}.footer-widget-container .widget{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-size:1.3rem;font-weight:normal;font-style:normal;text-transform:none;line-height:1.6;letter-spacing:0px;word-spacing:0px;}.footer-text{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;font-size:1.3rem;font-weight:normal;font-style:normal;text-transform:none;line-height:1.6;letter-spacing:0px;word-spacing:0px;}
+@media screen and (min-width: 800px){.site-navigation ul.menu ul a:hover,.site-navigation ul.menu ul a:focus,.site-navigation .menu ul ul a:hover,.site-navigation .menu ul ul a:focus{background-color:#aed4c8;}.has-left-sidebar.has-right-sidebar .entry-title{font-size:22px;font-size:2.2rem;}}
+</style>
+<!-- End Make Inline CSS -->
+		<style type="text/css" id="wp-custom-css">
+			/*
+Welcome to Custom CSS!
+
+CSS (Cascading Style Sheets) is a kind of code that tells the browser how
+to render a web page. You may delete these comments and get started with
+your customizations.
+
+By default, your stylesheet will be loaded after the theme stylesheets,
+which means that your rules can take precedence and override the theme CSS
+rules. Just write here what you want to change, you don't need to copy all
+your theme's stylesheet content.
+*/
+.type-post img {
+	width: 100%;
+	margin: 4rem 0;
+}
+
+p {
+	margin-bottom: 1.6rem;
+}
+
+b, strong {
+	font-weight: normal;
+	font-family: copse;
+	font-size: 22px;
+}
+
+.custom-logo {
+	margin: 0 auto;
+}
+
+.menu-toggle {
+	background-color: #E47A78;
+}		</style>
+		</head>
+
+	<body class="post-template-default single single-post postid-88 single-format-standard wp-custom-logo view-post boxed">
+		<div id="site-wrapper" class="site-wrapper">
+			<a class="skip-link screen-reader-text" href="#site-content">Skip to content</a>
+
+
+<header id="site-header" class="site-header header-layout-1 no-site-title no-site-tagline" role="banner">
+		<div class="header-bar right-content">
+		<div class="container">
+								<div class="header-social-links">
+			<ul class="social-customizer social-links">
+				<li class="make-social-icon">
+					<a href="https://twitter.com/fabrefaction_uk">
+						<i class="fa fa-fw fa-twitter" aria-hidden="true"></i>
+						<span class="screen-reader-text">Twitter</span>
+					</a>
+				</li>
+							<li class="make-social-icon">
+					<a href="https://instagram.com/katiemclurg/">
+						<i class="fa fa-fw fa-instagram" aria-hidden="true"></i>
+						<span class="screen-reader-text">Instagram</span>
+					</a>
+				</li>
+							<li class="make-social-icon">
+					<a href="http://www.pinterest.com/fabrefactionblg/">
+						<i class="fa fa-fw fa-pinterest" aria-hidden="true"></i>
+						<span class="screen-reader-text">Pinterest</span>
+					</a>
+				</li>
+			</ul>
+			</div>
+									</div>
+	</div>
+		<div class="site-header-main">
+		<div class="container">
+			<div class="site-branding">
+									<a href="/" class="custom-logo-link" rel="home" itemprop="url"><img width="200" height="150" src="/contents/data/2014/06/Logo1.png?fit=200%2C150" class="custom-logo" alt="" itemprop="logo" /></a>												<h1 class="site-title screen-reader-text">
+					<a href="/" rel="home">fabrefaction</a>
+				</h1>
+											</div>
+
+			<nav id="site-navigation" class="site-navigation" role="navigation">
+				<span class="menu-toggle">Menu</span>
+				<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-3542" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-3542"><a href="/">Blog</a></li>
+<li id="menu-item-2591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2591"><a href="/about/">About</a></li>
+<li id="menu-item-2611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2611"><a href="/contact/">Contact</a></li>
+</ul></div>			</nav>
+		</div>
+	</div>
+</header>
+			<div id="site-content" class="site-content">
+				<div class="container">
+
+<main id="site-main" class="site-main" role="main">
+
+
+<article id="post-88" class="post-88 post type-post status-publish format-standard has-post-thumbnail hentry category-baking category-child-friendly category-christmas category-craft category-uncategorized tag-biscuit tag-christmas tag-decorate tag-festive tag-fun tag-gingerbread tag-gingerbread-house tag-holidays tag-how-to tag-icing tag-piping tag-sweets tag-tutorial">
+		<header class="entry-header">
+		<div class="entry-meta">
+
+<time class="entry-date published" datetime="2013-12-19T17:00:35+00:00">December 19, 2013</time>
+</div>
+
+<h1 class="entry-title">
+			Gingerbread architecture: The final frontier	</h1>
+<div class="entry-meta">
+</div>	</header>
+
+	<div class="entry-content">
+				<input class="jpibfi" type="hidden"><p style="text-align: left;">At last, time to decorate.</p>
+<p style="text-align: left;">This is by far the best bit, and your opportunity to hide any blemishes. For me, that was a whacking great crack down the front, the odd broken window pane and some darker than attractive edges. So fill your piping bags, stick on a Christmas film, or phone a good friend using hands-free and enjoy!</p>
+<p style="text-align: left;">There are no steps in this post, just some ideas to get you going.</p>
+<p style="text-align: left;"><strong>Things you need:</strong></p>
+<p style="text-align: left;">Royal icing of course (you can use regular but I find royal dries quicker and looks whiter)</p>
+<p style="text-align: left;">Piping bags</p>
+<p style="text-align: left;">Sweets Sweets Sweets</p>
+<p style="text-align: left;"><strong>A little tip</strong></p>
+<p style="text-align: left;">When you&#8217;re buying your sweets you should have a think about roughly what will go where, specifically in terms of the roof. Make sure you overestimate how much you think you will need, it&#8217;s always surprising how quickly everything disappears. Particularly if you adopt a &#8216;one for the house, one for me&#8217; approach, which is the correct way to do this in case you were wondering.</p>
+<p style="text-align: left;"><a href="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse13.jpg"><img class="aligncenter size-large wp-image-74" src="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse13.jpg?resize=560%2C378" alt="GingerbreadHouse13" data-jpibfi-post-excerpt="" data-jpibfi-post-url="/2013/12/19/how-to-make-gingerbread-house/" data-jpibfi-post-title="Gingerbread architecture: The final frontier"  data-recalc-dims="1"></a></p>
+<p style="text-align: left;">I chose button tiles for my roof. The key is to make sure there is some overhang on your first layer, and then just keep going in lines, overlapping slightly, until you hit the top. Chocolate fingers or matchmakers work for a sort of log cabin look, or I&#8217;ve seen shredded wheat for a thatched roof (not sure who would want to eat that though!).</p>
+<p style="text-align: left;">Once I had finished I dusted my roof with some icing sugar snow for a wintery look.</p>
+<p style="text-align: left;"><a href="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse11.jpg"><img class="aligncenter size-large wp-image-72" src="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse11.jpg?resize=560%2C378" alt="GingerbreadHouse11" data-jpibfi-post-excerpt="" data-jpibfi-post-url="/2013/12/19/how-to-make-gingerbread-house/" data-jpibfi-post-title="Gingerbread architecture: The final frontier"  data-recalc-dims="1"></a></p>
+<p style="text-align: left;">The last couple of years I&#8217;ve done normal houses, but I&#8217;ve decided to start theming them more now I&#8217;ve got the hang of it a little bit. So this year&#8217;s effort is designed to be an old fashioned sweet shop (it seemed apt given the sugar coma it put me in). Obviously it needed an awning or two! I just coloured some of my icing red and alternated between the two colours until I reached the end. If you want straight lines then the trick is to hover away from the biscuit a bit so you have more control over the direction.</p>
+<p style="text-align: left;"><a href="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse12.jpg"><img class="aligncenter size-large wp-image-73" src="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse12.jpg?resize=560%2C378" alt="GingerbreadHouse12" data-jpibfi-post-excerpt="" data-jpibfi-post-url="/2013/12/19/how-to-make-gingerbread-house/" data-jpibfi-post-title="Gingerbread architecture: The final frontier"  data-recalc-dims="1"></a></p>
+<p style="text-align: left;">What cosy winter hideaway is complete without some snow caught in the window panes? The idea here is to fill one of the corners a little more than the other, which I realised after piping the window in the centre&#8230;</p>
+<p style="text-align: left;">And now ladies and gents&#8230;the finished article! Complete with flickering fire light (an LED tea light candle pushed through the doorway)</p>
+<p style="text-align: left;">As you can see I bought mainly different coloured and sized circles: chocolate drops, silver balls, smarties and chocolate buttons. I like little dots of icing to decorate with too, but you need to decide what works best for you, it should be fun! I don&#8217;t really pre-plan, but buying lots of similar shaped things helps I think.</p>
+<p style="text-align: left;"><a href="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse21.jpg"><img class="aligncenter size-large wp-image-91" src="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse21.jpg?resize=560%2C378" alt="GingerbreadHouse21" data-jpibfi-post-excerpt="" data-jpibfi-post-url="/2013/12/19/how-to-make-gingerbread-house/" data-jpibfi-post-title="Gingerbread architecture: The final frontier"  data-recalc-dims="1"></a></p>
+<p style="text-align: left;"><a href="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse22.jpg"><img class="aligncenter size-large wp-image-92" src="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse22.jpg?resize=560%2C378" alt="GingerbreadHouse22" data-jpibfi-post-excerpt="" data-jpibfi-post-url="/2013/12/19/how-to-make-gingerbread-house/" data-jpibfi-post-title="Gingerbread architecture: The final frontier"  data-recalc-dims="1"></a></p>
+<p style="text-align: left;"><a href="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse24.jpg"><img class="aligncenter size-large wp-image-94" src="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse24.jpg?resize=560%2C378" alt="GingerbreadHouse24" data-jpibfi-post-excerpt="" data-jpibfi-post-url="/2013/12/19/how-to-make-gingerbread-house/" data-jpibfi-post-title="Gingerbread architecture: The final frontier"  data-recalc-dims="1"></a></p>
+<p style="text-align: left;"><a href="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse23.jpg"><img class="aligncenter size-large wp-image-93" src="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse23.jpg?resize=560%2C378" alt="GingerbreadHouse23" data-jpibfi-post-excerpt="" data-jpibfi-post-url="/2013/12/19/how-to-make-gingerbread-house/" data-jpibfi-post-title="Gingerbread architecture: The final frontier"  data-recalc-dims="1"></a></p>
+<p style="text-align: left;"><strong>Oh wait!</strong></p>
+<p style="text-align: left;">That&#8217;s not all&#8230; remember this little guy?</p>
+<p style="text-align: left;"><a href="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse19.jpg"><img class="aligncenter size-large wp-image-89" src="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse19.jpg?resize=560%2C500" alt="GingerbreadHouse19" data-jpibfi-post-excerpt="" data-jpibfi-post-url="/2013/12/19/how-to-make-gingerbread-house/" data-jpibfi-post-title="Gingerbread architecture: The final frontier"  data-recalc-dims="1"></a></p>
+<p style="text-align: left;">Well I decorated him too. The base he was sitting on is actually the lid of a gift box, I won&#8217;t show you what&#8217;s inside though, incase the recipient is reading this (there needs to be some element of surprise!) This adds a lovely personal touch to any present, or can just be the present in itself!</p>
+<p style="text-align: left;">The front and back are A6 size (A4 paper folded into quarters) and then measure everything else out based on that. You can get at least four of these guys out of one batch of <a title="Fabrefaction How to Make a Gingerbread House" href="/2013/12/16/gingerbread-architecture-phase-1/">mixture</a>.</p>
+<p style="text-align: left;"><strong>Before you go&#8230;just one more little idea&#8230;</strong></p>
+<p style="text-align: left;"><a href="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse20.jpg"><img class="aligncenter size-large wp-image-90" src="fabrefactionblog.files.wordpress.com/2013/12/gingerbreadhouse20.jpg?resize=560%2C420" alt="GingerbreadHouse20" data-jpibfi-post-excerpt="" data-jpibfi-post-url="/2013/12/19/how-to-make-gingerbread-house/" data-jpibfi-post-title="Gingerbread architecture: The final frontier"  data-recalc-dims="1"></a></p>
+<p style="text-align: left;">A homemade festive gift without the fuss for someone you like, but not an &#8216;I made you a gingerbread house&#8217; level of like.</p>
+<p style="text-align: left;">To make a tree the easiest thing to do is to get your hands on star shaped biscuit cutters of at least three or four different sizes. You want around 16 or so stars for each tree, then just stack them with icing to stick each layer together. If you don&#8217;t have cutters then make some templates to cut round instead (you can do this using auto shapes on the computer). One batch of mixture should make at least 8 I reckon.</p>
+<p style="text-align: left;">Pipe lots of blobs of icing and add silver balls, chocolate drops and smarties for decoration.</p>
+<p style="text-align: left;">I used a candle holder turned upside down for the base, but a disc of cardboard covered in tinfoil would work just fine too. Remember, whatever you use, you aren&#8217;t going to get back!</p>
+<p style="text-align: left;">The cellophane I used to wrap it was bought from a florist supplies shop online and was about £3 for the roll, which I&#8217;ve been using for various projects for about 2 years!</p>
+<p style="text-align: left;">Cut a big square (bigger than you think), I made one as large as my roll would allow. Place tree on the middle and bring all the corners to meet in the middle. scrunch the remaining edges together and call for help (this will save your little finger aerobics when you&#8217;re tying the ribbon). With someone else holding it all together, double knot a few pieces of gift ribbon and curl the ends with scissors. Chop off the messy bits of plastic.</p>
+<p style="text-align: left;">Voila!</p>
+<h6 class="zemanta-related-title" style="font-size: 1em; text-align: left;">Related articles</h6>
+<h6 class="zemanta-related-title" style="font-size: 1em; text-align: left;"><a href="/2013/12/16/gingerbread-architecture-phase-1/" target="_blank">Gingerbread Architecture: Phase 1</a></h6>
+<h6 class="zemanta-related-title" style="font-size: 1em; text-align: left;"><a href="/2013/12/17/gingerbread-architecture-phase-2/" target="_blank">Gingerbread Architecture: Phase 2</a></h6>
+
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+</div>
+	</div>
+
+		<footer class="entry-footer">
+		<div class="entry-meta">
+
+</div>
+	<i class="fa fa-file"></i> <ul class="post-categories">
+	<li><a href="/category/baking/" rel="category tag">Baking</a></li>
+	<li><a href="/category/child-friendly/" rel="category tag">Child Friendly</a></li>
+	<li><a href="/category/christmas/" rel="category tag">Christmas</a></li>
+	<li><a href="/category/craft/" rel="category tag">Craft</a></li>
+	<li><a href="/category/uncategorized/" rel="category tag">Uncategorized</a></li></ul><i class="fa fa-tag"></i> <ul class="post-tags"><li><a href="/tag/biscuit/" rel="tag">biscuit</a></li>
+<li><a href="/tag/christmas/" rel="tag">Christmas</a></li>
+<li><a href="/tag/decorate/" rel="tag">decorate</a></li>
+<li><a href="/tag/festive/" rel="tag">Festive</a></li>
+<li><a href="/tag/fun/" rel="tag">Fun</a></li>
+<li><a href="/tag/gingerbread/" rel="tag">gingerbread</a></li>
+<li><a href="/tag/gingerbread-house/" rel="tag">gingerbread house</a></li>
+<li><a href="/tag/holidays/" rel="tag">Holidays</a></li>
+<li><a href="/tag/how-to/" rel="tag">how to</a></li>
+<li><a href="/tag/icing/" rel="tag">icing</a></li>
+<li><a href="/tag/piping/" rel="tag">piping</a></li>
+<li><a href="/tag/sweets/" rel="tag">sweets</a></li>
+<li><a href="/tag/tutorial/" rel="tag">Tutorial</a></li></ul><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-88" class="share-facebook sd-button share-icon no-text" href="/2013/12/19/how-to-make-gingerbread-house/" target="_blank" title="Click to share on Facebook"><span></span><span class="sharing-screen-reader-text">Click to share on Facebook (Opens in new window)</span></a></li><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-88" class="share-twitter sd-button share-icon no-text" href="/2013/12/19/how-to-make-gingerbread-house/" target="_blank" title="Click to share on Twitter"><span></span><span class="sharing-screen-reader-text">Click to share on Twitter (Opens in new window)</span></a></li><li class="share-pinterest"><a rel="nofollow" data-shared="sharing-pinterest-88" class="share-pinterest sd-button share-icon no-text" href="/2013/12/19/how-to-make-gingerbread-house/" target="_blank" title="Click to share on Pinterest"><span></span><span class="sharing-screen-reader-text">Click to share on Pinterest (Opens in new window)</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-88" class="share-google-plus-1 sd-button share-icon no-text" href="/2013/12/19/how-to-make-gingerbread-house/" target="_blank" title="Click to share on Google+"><span></span><span class="sharing-screen-reader-text">Click to share on Google+ (Opens in new window)</span></a></li><li class="share-reddit"><a rel="nofollow" data-shared="" class="share-reddit sd-button share-icon no-text" href="/2013/12/19/how-to-make-gingerbread-house/" target="_blank" title="Click to share on Reddit"><span></span><span class="sharing-screen-reader-text">Click to share on Reddit (Opens in new window)</span></a></li><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon no-text" href="/2013/12/19/how-to-make-gingerbread-house/" target="_blank" title="Click to email this to a friend"><span></span><span class="sharing-screen-reader-text">Click to email this to a friend (Opens in new window)</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-67022057-88-5b22ebde16d40' data-src='//widgets.wp.com/likes/#blog_id=67022057&amp;post_id=88&amp;origin=&amp;obj_id=67022057-88-5b22ebde16d40' data-name='like-post-frame-67022057-88-5b22ebde16d40'><h3 class="sd-title">Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>	</footer>
+	</article>
+		<nav class="navigation post-navigation" role="navigation">
+	<span class="screen-reader-text">Post navigation</span>
+	<div class="nav-links">
+		<div class="nav-previous"><a href="/2013/12/23/homemade-peppermint-hot-chocolate-recipe/" rel="next">Mrs Claus&#8217; cocoa</a></div><div class="nav-next"><a href="/2013/12/17/how-to-make-gingerbread-house-2/" rel="prev">Gingerbread architecture: Phase 2</a></div>	</div>
+</nav>
+
+
+<div id="comments" class="comments-area">
+		<h3 class="comments-title">
+		3 comments	</h3>
+
+
+		<ol class="comment-list">
+
+	<li id="comment-31" class="comment even thread-even depth-1 comment-parent">
+		<article id="div-comment-31" class="comment-body">
+			<header class="comment-header">
+				<img alt='' src='http://1.gravatar.com/avatar/a91e160a15f2e400c282d00f3f7f06b6?s=38&#038;d=identicon&#038;r=g' srcset='http://1.gravatar.com/avatar/a91e160a15f2e400c282d00f3f7f06b6?s=76&amp;d=identicon&amp;r=g 2x' class='avatar avatar-38 photo' height='38' width='38' />				<div class="comment-date">
+					<a href="/2013/12/19/how-to-make-gingerbread-house/#comment-31">
+						<time datetime="2013-12-19T20:33:59+00:00">
+							December 19, 2013 at 8:33 pm						</time>
+					</a>
+				</div>
+				<div class="comment-author vcard">
+					<cite class="fn"><a href='http://loverlysheblog.com' rel='external nofollow' class='url'>katieoverbeek</a></cite> <span class="says">says:</span>				</div>
+
+							</header>
+
+			<div class="comment-content">
+				<p>Oh my life these are amazing!  Love that you have a blog, Katie &#8211; if you want to promote it at all just let me know and I can put up an ad for you on mine 🙂</p>
+<p>-Katie (Anna&#8217;s sister)</p>
+			</div>
+
+					</article>
+
+	<ul class="children">
+
+	<li id="comment-41" class="comment odd alt depth-2">
+		<article id="div-comment-41" class="comment-body">
+			<header class="comment-header">
+				<img alt='' src='http://1.gravatar.com/avatar/7542fef30be8983f0c63d8c24297da56?s=38&#038;d=identicon&#038;r=g' srcset='http://1.gravatar.com/avatar/7542fef30be8983f0c63d8c24297da56?s=76&amp;d=identicon&amp;r=g 2x' class='avatar avatar-38 photo' height='38' width='38' />				<div class="comment-date">
+					<a href="/2013/12/19/how-to-make-gingerbread-house/#comment-41">
+						<time datetime="2013-12-19T20:43:02+00:00">
+							December 19, 2013 at 8:43 pm						</time>
+					</a>
+				</div>
+				<div class="comment-author vcard">
+					<cite class="fn"><a href='http://fabrefactionblog.wordpress.com' rel='external nofollow' class='url'>katie</a></cite> <span class="says">says:</span>				</div>
+
+							</header>
+
+			<div class="comment-content">
+				<p>Ahhh thank you! Hope you&#8217;re enjoying having Aunty Anna home for the holidays, and your first Christmas with bubba. If you don&#8217;t mind doing that at some point I definitely wouldn&#8217;t say no! I follow yours via Facebook as Anna told me about it. Happy Christmas! Xx</p>
+			</div>
+
+					</article>
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li id="comment-116314" class="pingback even thread-odd thread-alt depth-1">
+		<div class="comment-body">
+			Pingback: <a href='/2015/12/18/gingerbread-town-village-house-recipe-template/' rel='external nofollow' class='url'>O little town of gingerbread | fabrefaction</a> 		</div>
+
+	</li><!-- #comment-## -->
+		</ol>
+
+
+
+		<p class="no-comments">
+		Comments are closed.	</p>
+
+	</div>
+
+</main>
+
+
+
+				</div>
+			</div>
+
+
+<footer id="site-footer" class="site-footer footer-layout-1" role="contentinfo">
+	<div class="container">
+
+
+
+<div class="site-info">
+	Built with <a class="theme-name" href="https://thethemefoundry.com/make/" target="_blank">Make</a>. Your friendly small business site builder.</div>
+
+				<div class="footer-social-links">
+			<ul class="social-customizer social-links">
+				<li class="make-social-icon">
+					<a href="https://twitter.com/fabrefaction_uk">
+						<i class="fa fa-fw fa-twitter" aria-hidden="true"></i>
+						<span class="screen-reader-text">Twitter</span>
+					</a>
+				</li>
+							<li class="make-social-icon">
+					<a href="https://instagram.com/katiemclurg/">
+						<i class="fa fa-fw fa-instagram" aria-hidden="true"></i>
+						<span class="screen-reader-text">Instagram</span>
+					</a>
+				</li>
+							<li class="make-social-icon">
+					<a href="http://www.pinterest.com/fabrefactionblg/">
+						<i class="fa fa-fw fa-pinterest" aria-hidden="true"></i>
+						<span class="screen-reader-text">Pinterest</span>
+					</a>
+				</li>
+			</ul>
+			</div>
+		</div>
+</footer>		</div>
+
+			<div style="display:none">
+	<div class="grofile-hash-map-a91e160a15f2e400c282d00f3f7f06b6">
+	</div>
+	<div class="grofile-hash-map-7542fef30be8983f0c63d8c24297da56">
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"\/2013\/12\/19\/how-to-make-gingerbread-house\/":88};
+	</script>
+			<div id="sharing_email" style="display: none;">
+		<form action="/2013/12/19/how-to-make-gingerbread-house/" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input type="email" name="target_email" id="target_email" value="" />
+
+
+				<label for="source_name">Your Name</label>
+				<input type="text" name="source_name" id="source_name" value="" />
+
+				<label for="source_email">Your Email Address</label>
+				<input type="email" name="source_email" id="source_email" value="" />
+
+						<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" />
+			<script>jQuery( document ).ready( function(){ document.getElementById('jetpack-source_f_name').value = '' });</script>
+
+			<img style="float: right; display: none" class="loading" src="/contents/lib/jetpack/modules/sharedaddy/images/loading.gif" alt="loading" width="16" height="16" />
+			<input type="submit" value="Send Email" class="sharing_send" />
+			<a rel="nofollow" href="#cancel" class="sharing_cancel">Cancel</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div>
+<script type='text/javascript' src='/contents/lib/jetpack/modules/photon/photon.js'></script>
+<script type='text/javascript' src='http://s0.wp.com/contents/js/devicepx-jetpack.js?ver=201824'></script>
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2018Junaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/contents/lib/jetpack/modules/wpgroho.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var MakeFrontEnd = {"fitvids":{"selectors":"iframe[src*='www.viddler.com'],iframe[src*='money.cnn.com'],iframe[src*='www.educreations.com'],iframe[src*='\/\/blip.tv'],iframe[src*='\/\/embed.ted.com'],iframe[src*='\/\/www.hulu.com']"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/contents/ui/theme/js/frontend.js'></script>
+<script type='text/javascript' src='/contents/ui/theme/js/formatting/dynamic-stylesheet/dynamic-stylesheet.js'></script>
+<script type='text/javascript' src='/contents/lib/jetpack/_inc/postmessage.js'></script>
+<script type='text/javascript' src='/contents/lib/jetpack/_inc/jquery.jetpack-resize.js'></script>
+<script type='text/javascript' src='/contents/lib/jetpack/_inc/jquery.inview.js'></script>
+<script type='text/javascript' src='/contents/lib/jetpack/modules/likes/queuehandler.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/contents/lib/jetpack/modules/sharedaddy/sharing.js'></script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-google-plus-1', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+</script>
+		<iframe src='http://widgets.wp.com/likes/master.html?ver=20160429#ver=20160429' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+		<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+		<script type='text/javascript' src='http://stats.wp.com/e-201824.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:4.4.2',blog:'67022057',post:'88',tz:'0',srv:''} ]);
+	_stq.push([ 'clickTrackerInit', '67022057', '88' ]);
+</script>
+
+	</body>
+</html>
+<!-- Dynamic page generated in 0.367 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2018-06-14 22:27:42 -->
+
+<!-- super cache -->
